@@ -1,0 +1,34 @@
+
+body {
+  font-family: 'Merriweather', serif;
+  background: #F6F3F3;
+  margin: 0;
+
+  %main-width {
+    width: 1216px;
+    margin: 0 auto;
+  }
+
+  %gallery-logo {
+    width: 48px;
+    height: 48px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 8px;
+  }
+
+  %button {
+
+    height: 48px;
+    outline: none;
+    color: #F4F6F9;
+    font-family: 'Merriweather';
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    &:hover {
+      background: #776763;
+      cursor: pointer;
+    }
+  }
+}
