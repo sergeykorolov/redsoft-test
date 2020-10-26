@@ -7,3 +7,7 @@ module.exports = {
         }
     }
 };
+
+module.exports = {
+    publicPath: '/redsoft-test/'
+}
