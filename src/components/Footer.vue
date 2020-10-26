@@ -22,7 +22,7 @@
 <script>
 
     import Menu from "./Menu"
-    import logo from "../assets/images/logo-museum 2 (1).png"
+    import logo from "../assets/images/logo-museum-footer.png"
     import phoneIcon from "../assets/images/phone-icon.png"
     import locationIcon from "../assets/images/location-icon.png"
 

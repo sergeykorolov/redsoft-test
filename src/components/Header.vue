@@ -19,7 +19,7 @@
 <script>
 
     import Menu from "./Menu";
-    import logo from "../assets/images/logo-museum 2.png"
+    import logo from "../assets/images/logo-museum-header.png"
 
     export default {
         name: "Header",

@@ -27,10 +27,10 @@
     import Header from "./Header";
     import PictureCard from "./PictureCard";
     import Footer from "./Footer";
-    import boticelliPicture from '../assets/images/painting-63186_1280 1.png'
-    import daVinciPicture from '../assets/images/ae973f6678e037cd297053384aa7dca0 1.png'
-    import mikelangeloPicture from '../assets/images/image-19 1.png'
-    import rembrandtPicture from '../assets/images/20152310142330 1.png'
+    import boticelliPicture from '../assets/images/botticelli.png'
+    import daVinciPicture from '../assets/images/da-vinci.png'
+    import mikelangeloPicture from '../assets/images/michelangelo.png'
+    import rembrandtPicture from '../assets/images/rembrandt.png'
 
     export default {
         name: "MainLayout",

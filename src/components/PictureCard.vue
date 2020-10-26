@@ -148,7 +148,7 @@
             .card__footer__button__load {
                 @extend %button;
                 align-self: flex-end;
-                width: 112px;
+                width: 117px;
                 margin-right: 24px;
                 background: #C1B4B1;
 
@@ -160,7 +160,7 @@
             .card__footer__button__basket {
                 @extend %button;
                 align-self: flex-end;
-                width: 118px;
+                width: 117px;
                 margin-right: 24px;
                 background-color: #5B3A32;
 
