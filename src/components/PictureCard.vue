@@ -49,31 +49,20 @@
             async buyPicture(cardId) {
                 this.loading = true
                 try {
-                    const res = await fetch('https://jsonplaceholder.typicode.com/posts/1', {
-                        method: 'GET',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                    const data = await res.json()
-                    if (res.status === 200 || res.status === 201) {
-                        /*********************/
-                        let cartIds = JSON.parse(localStorage.getItem('cartIds'))
-                        if (cartIds) {
-                            cartIds.push(cardId);
-                        } else {
-                            cartIds = [cardId];
-                        }
-                        localStorage.setItem('cartIds', JSON.stringify(cartIds))
-                        /****************/
-                        this.addToBasket()
-                        this.loading = false
-                    }else {
-                        this.errors = data
-                        console.error(data)
+                    const res = await this.$api.basket.addToBasket({})
+                    console.log(res)
+                    let basketIds = JSON.parse(localStorage.getItem('basketIds'))
+                    if (basketIds) {
+                        basketIds.push(cardId);
+                    } else {
+                        basketIds = [cardId];
                     }
+                    localStorage.setItem('basketIds', JSON.stringify(basketIds))
+                    this.addToBasket()
+                    this.loading = false
+
                 } catch (error) {
-                    console.log(error)
+                    console.log(error.response.data)
                 }
             }
         }
@@ -89,6 +78,7 @@
         border: 1px solid #E1E1E1;
         box-sizing: border-box;
         margin-right: 32px;
+
         &:last-child {
             margin-right: 0;
         }
@@ -145,6 +135,7 @@
                 margin-right: 23px;
                 background: #382E2B;
             }
+
             .card__footer__button__load {
                 @extend %button;
                 align-self: flex-end;
@@ -157,6 +148,7 @@
                     height: auto;
                 }
             }
+
             .card__footer__button__basket {
                 @extend %button;
                 align-self: flex-end;

@@ -80,20 +80,15 @@
         methods: {
             addToBasket(index) {
                 this.pictureCards[index].inBasket = true
-                console.log(this.pictureCards[index].inBasket)
             },
             getInBasket(cardId) {
-                const cardIds = localStorage.getItem('cartIds');
+                const cardIds = localStorage.getItem('basketIds');
                 if (cardIds) {
                     return !!(cardIds.indexOf(cardId) + 1);
                 }
                 return false;
             }
         },
-        computed: {},
-        watch: {
-
-        }
     }
 </script>
 
